@@ -1,18 +1,39 @@
 <template>
   <div id="app">
+    <Todos v-bind:todos= "todos"/>
     
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Todos from './components/Todos';
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-    HelloWorld
+    Todos
+  },
+  data() {
+    return {
+    todos: [
+      {
+        id: 1,
+        title: 'Todo 1',
+        completed: false
+      },
+      {
+        id: 1,
+        title: 'Todo 2',
+        completed: false
+      },
+      {
+         id: 1,
+        title: 'Todo 3',
+        completed: false
+      }
+    ]
   }
+}
 }
 </script>
 
